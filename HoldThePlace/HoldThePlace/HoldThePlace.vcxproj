@@ -137,6 +137,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Enemy.hpp" />
+    <ClInclude Include="FireTower.hpp" />
+    <ClInclude Include="Game.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
