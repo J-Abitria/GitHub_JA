@@ -149,6 +149,18 @@
     <ClInclude Include="Unit.hpp" />
     <ClInclude Include="Wave.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="waves.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="FireBullet.png" />
+    <Image Include="Fire_Tower.png" />
+    <Image Include="Lightning_Projectile.png" />
+    <Image Include="Lightning_Tower.png" />
+    <Image Include="Map_Background.png" />
+    <Image Include="Voidling.png" />
+    <Image Include="Voidling_Hit.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

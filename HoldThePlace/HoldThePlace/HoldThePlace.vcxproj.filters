@@ -57,4 +57,32 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="waves.csv">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Fire_Tower.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FireBullet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Lightning_Projectile.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Lightning_Tower.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Map_Background.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Voidling.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Voidling_Hit.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
