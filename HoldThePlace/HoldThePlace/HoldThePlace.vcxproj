@@ -145,6 +145,9 @@
     <ClInclude Include="Projectile.hpp" />
     <ClInclude Include="Test.hpp" />
     <ClInclude Include="Tile.hpp" />
+    <ClInclude Include="Tower.hpp" />
+    <ClInclude Include="Unit.hpp" />
+    <ClInclude Include="Wave.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
