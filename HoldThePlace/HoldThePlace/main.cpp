@@ -1,25 +1,24 @@
-#include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
+#include "Game.hpp"
+#include "Test.hpp"
+/*
+	Created by: James Abitria, Nick Haugen, Zach Goodin, Nick Rausch
+	Class: CPT_S 122
+	Lab Sections: 6 (James),
+	Assignment: Programming Assignment 9
+	Date Created: 4-12-24
+	Last Update: 4-22-24
 
-int main()
-{
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+	Name: Hold the Place
+	Description: This program runs a Tower Defense game, with a simple path that enemies travel across to enter a portal to deal damage to
+	the Player. The Player must place Towers using left-click in order to destroy all enemies and win the game. There is currently a single
+	wave.
+*/
+int main() {
+	Test t;
+	Game g;
 
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
-
-    return 0;
+	t.runTests();
+	system("cls");
+	g.runGame();
+	return 0;
 }
