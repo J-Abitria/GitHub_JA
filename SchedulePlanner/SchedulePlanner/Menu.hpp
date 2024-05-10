@@ -12,8 +12,12 @@ public:
 	}
 
 	void runApp();
-	void viewMenu();
 private:
 	void populateWeek();
+	void viewMenu();
+	void runSelection(int selection);
+	void loadData();
+	void saveData();
+	string readToCharacter(string line, int& reference);
 	Day week[7];
 };

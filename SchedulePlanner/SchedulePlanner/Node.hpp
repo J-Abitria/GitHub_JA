@@ -19,6 +19,7 @@ public:
 
 	Data getData() { return this->eventInfo; }
 	Node* getNext() { return this->pNext; }
+	void setNext(Node* newNext) { this->pNext = newNext; }
 private:
 	Node* pNext;
 	Data eventInfo;

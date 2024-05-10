@@ -22,9 +22,11 @@ public:
 
 	}
 
+	Node* getHead() { return this->listHead; }
 	void setName(string newName) { this->name = newName; }
 
 	void insertInOrder(Data newData);
+	Data removeFront();
 private:
 	string name;
 	Node* listHead;
