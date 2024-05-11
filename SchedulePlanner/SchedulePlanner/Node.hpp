@@ -18,6 +18,7 @@ public:
 	}
 
 	Data getData() const { return this->eventInfo; }
+	Data& getDataRef() { return this->eventInfo; }
 	Node* getNext() const { return this->pNext; }
 	void setNext(Node* newNext) { this->pNext = newNext; }
 private:

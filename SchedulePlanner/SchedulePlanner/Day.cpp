@@ -8,14 +8,23 @@ void Day::insertInOrder(Data newData) {
 	}
 	else {
 		Node* pCur = this->listHead;
-		int curTime = pCur->getData().getHour() * 60 + pCur->getData().getMinutes(), memTime = pMem->getData().getHour() * 60 + pMem->getData().getMinutes();
-		while (pCur != nullptr) {
+		int curTime = 0, memTime = pMem->getData().getHour() * 60 + pMem->getData().getMinutes();
+		bool added = false;
+		while (pCur != nullptr && !added) {
+			curTime = pCur->getData().getHour() * 60 + pCur->getData().getMinutes();
 			if (curTime < memTime) {
-				pCur = pCur->getNext();
+				if (pCur->getNext() != nullptr) {
+					pCur = pCur->getNext();
+				}
+				else {
+					pCur->setNext(pMem);
+					added = true;
+				}
 			}
 			else {
 				pMem->setNext(pCur->getNext());
 				pCur->setNext(pMem);
+				added = true;
 			}
 		}
 	}

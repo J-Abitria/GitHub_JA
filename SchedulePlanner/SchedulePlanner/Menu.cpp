@@ -50,6 +50,7 @@ void Menu::runSelection(int selection) {
 		cout << "Added a new event." << endl;
 		break;
 	case 5:
+		this->editEvent();
 		break;
 	}
 	system("pause");
@@ -141,15 +142,36 @@ void Menu::createEvent() {
 }
 
 void Menu::editEvent() {
-	int selection = this->promptDay(), count = 1;
-	Node* pCur = this->week[selection - 1].getHead();
+	int idx = this->promptDay(), count = 0, selection = 0;
+	Node* pCur = this->week[idx].getHead();
 
-	while (pCur != nullptr) {
-		cout << count << ". ";
-		this->displayEvent(pCur->getData());
+	if (pCur != nullptr) {
+		while (pCur != nullptr) {
+			count++;
+			cout << count << ". ";
+			this->displayEvent(pCur->getData());
 
-		pCur = pCur->getNext();
-		count++;
+			pCur = pCur->getNext();
+		}
+
+		do {
+			cout << "Enter the number next to the event you want to edit." << endl;
+			cin >> selection;
+
+			if (selection < 0 || selection > count) {
+				cout << "That input is invalid." << endl;
+				system("pause");
+			}
+		} while (selection < 1 || selection > count);
+
+		pCur = this->week[idx].getHead();
+		for (int i = 0; i < selection - 1; i++) {
+			pCur = pCur->getNext();
+		}
+		this->editingMenu(pCur);
+	}
+	else {
+		cout << "There are no events to edit!" << endl;
 	}
 }
 
@@ -207,4 +229,47 @@ void Menu::displayEvent(Data eventInfo) {
 	else {
 		cout << eventInfo.getMinutes() << endl;
 	}
+}
+
+void Menu::editingMenu(Node* dataLocation) {
+	int selection = 0, hour = 0, minutes = 0;
+	string newName = "";
+	char buffer = '\0';
+	do {
+		system("cls");
+		this->displayEvent(dataLocation->getData());
+		cout << "Enter the number of the field to edit." << endl;
+		cout << "1. Name" << endl;
+		cout << "2. Time" << endl;
+		cin >> selection;
+
+		if (selection < 1 || selection > 2) {
+			cout << "This input is invalid." << endl;
+		}
+		else {
+			switch (selection) {
+			case 1:
+				cout << "Enter the new name for the event." << endl;
+				cin >> newName;
+				dataLocation->getDataRef().setEvent(newName);
+				break;
+			case 2:
+				cout << "Enter the new time for the event (Format HH:MM)" << endl;
+				cin >> hour >> buffer >> minutes;
+				if ((hour >= 0 && hour < 24) && (minutes >= 0 && minutes < 60)) {
+					dataLocation->getDataRef().setHour(hour);
+					dataLocation->getDataRef().setMinutes(minutes);
+				}
+				else {
+					cout << "This input is invalid." << endl;
+					system("pause");
+				}
+				break;
+			}
+		}
+		system("cls");
+		this->displayEvent(dataLocation->getData());
+		cout << "Is this correct? (Y/N)" << endl;
+		cin >> buffer;
+	} while (toupper(buffer) != 'Y');
 }

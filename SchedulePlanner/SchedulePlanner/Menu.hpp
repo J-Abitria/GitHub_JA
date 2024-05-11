@@ -24,5 +24,6 @@ private:
 	string readToCharacter(string line, int& reference);
 	int promptDay();
 	void displayEvent(Data eventInfo);
+	void editingMenu(Node* dataLocation);
 	Day week[7];
 };
