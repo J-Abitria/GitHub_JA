@@ -22,7 +22,8 @@ public:
 
 	}
 
-	Node* getHead() { return this->listHead; }
+	string getName() const { return this->name; }
+	Node* getHead() const { return this->listHead; }
 	void setName(string newName) { this->name = newName; }
 
 	void insertInOrder(Data newData);

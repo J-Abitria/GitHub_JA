@@ -43,8 +43,11 @@ void Menu::runSelection(int selection) {
 		cout << "Save successful." << endl;
 		break;
 	case 3:
+		this->viewSchedule();
 		break;
 	case 4:
+		this->createEvent();
+		cout << "Added a new event." << endl;
 		break;
 	case 5:
 		break;
@@ -91,6 +94,65 @@ void Menu::saveData() {
 	output.close();
 }
 
+void Menu::viewSchedule() {
+	for (Day d : this->week) {
+		cout << d.getName() << ":" << endl;
+		Node* pCur = d.getHead();
+		while (pCur != nullptr) {
+			this->displayEvent(pCur->getData());
+
+			pCur = pCur->getNext();
+		}
+	}
+}
+
+void Menu::createEvent() {
+	int selection = 0, hour = 0, minutes = 0;
+	string name;
+	char confirm = '\0';
+	
+	selection = this->promptDay();
+
+	do {
+		system("cls");
+		cout << "Name the event you wish to make:" << endl;
+		cin >> name;
+		cout << "Is this correct? (Y/N) " << name << endl;
+		cin >> confirm;
+	} while (toupper(confirm) != 'Y');
+
+	do {
+		system("cls");
+		cout << "Enter the time for the event (Format HH:MM)" << endl;
+		cin >> hour >> confirm >> minutes;
+		if ((hour > -1 && hour < 25) && (minutes > -1 && minutes < 60)) {
+			cout << "Are these times correct? (Y/N) - Hour: " << hour << " Minutes: " << minutes << endl;
+			cin >> confirm;
+		}
+		else {
+			cout << "One of the inputted values is invalid." << endl;
+			system("pause");
+			confirm = 'N';
+		}
+	} while (toupper(confirm) != 'Y');
+
+	Data newEvent(hour, minutes, name);
+	this->week[selection].insertInOrder(newEvent);
+}
+
+void Menu::editEvent() {
+	int selection = this->promptDay(), count = 1;
+	Node* pCur = this->week[selection - 1].getHead();
+
+	while (pCur != nullptr) {
+		cout << count << ". ";
+		this->displayEvent(pCur->getData());
+
+		pCur = pCur->getNext();
+		count++;
+	}
+}
+
 string Menu::readToCharacter(string line, int& reference) {
 	int idx = reference;
 	bool reading = true;
@@ -108,4 +170,41 @@ string Menu::readToCharacter(string line, int& reference) {
 	} while (reading);
 
 	return segment;
+}
+
+int Menu::promptDay() {
+	int selection = 0;
+	char confirm = '\0';
+
+	do {
+		system("cls");
+		cout << "Enter a number for the day you want to access (1-7, 1 is Monday, days are in order with 7 being Sunday):" << endl;
+		cin >> selection;
+		if (selection < 1 || selection > 7) {
+			cout << "That is not a valid day." << endl;
+			system("pause");
+		}
+		else {
+			cout << "You entered " << this->week[selection - 1].getName() << ". Is this correct? (Y/N)" << endl;
+			cin >> confirm;
+		}
+	} while (toupper(confirm) != 'Y');
+
+	return selection - 1;
+}
+
+void Menu::displayEvent(Data eventInfo) {
+	cout << eventInfo.getEvent() << " - ";
+	if (eventInfo.getHour() < 10) {
+		cout << "0" << eventInfo.getHour() << ":";
+	}
+	else {
+		cout << eventInfo.getHour() << ":";
+	}
+	if (eventInfo.getMinutes() < 10) {
+		cout << "0" << eventInfo.getMinutes() << endl;
+	}
+	else {
+		cout << eventInfo.getMinutes() << endl;
+	}
 }

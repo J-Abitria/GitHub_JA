@@ -18,6 +18,11 @@ private:
 	void runSelection(int selection);
 	void loadData();
 	void saveData();
+	void viewSchedule();
+	void createEvent();
+	void editEvent();
 	string readToCharacter(string line, int& reference);
+	int promptDay();
+	void displayEvent(Data eventInfo);
 	Day week[7];
 };

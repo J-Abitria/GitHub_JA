@@ -18,13 +18,13 @@ public:
 		this->event = "";
 	}
 
-	Data(int h, int m, string e, string d) {
+	Data(int h, int m, string e) {
 		this->hour = h;
 		this->minutes = m;
 		this->event = e;
 	}
 
-	Data(Data& d) {
+	Data(const Data& d) {
 		this->hour = d.hour;
 		this->minutes = d.minutes;
 		this->event = d.event;
@@ -34,9 +34,9 @@ public:
 
 	}
 
-	int getHour() { return this->hour; }
-	int getMinutes() { return this->minutes; }
-	string getEvent() { return this->event;  }
+	int getHour() const { return this->hour; }
+	int getMinutes() const { return this->minutes; }
+	string getEvent() const { return this->event;  }
 	void setHour(int newHour) { this->hour = newHour; }
 	void setMinutes(int newMinutes) { this->minutes = newMinutes; }
 	void setEvent(string newEvent) { this->event = newEvent; }

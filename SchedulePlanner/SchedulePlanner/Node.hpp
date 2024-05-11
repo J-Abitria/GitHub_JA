@@ -8,7 +8,7 @@ public:
 		this->pNext = nullptr;
 	}
 
-	Node(Node*& n) {
+	Node(const Node*& n) {
 		this->eventInfo = n->eventInfo;
 		this->pNext = n->pNext;
 	}
@@ -17,8 +17,8 @@ public:
 
 	}
 
-	Data getData() { return this->eventInfo; }
-	Node* getNext() { return this->pNext; }
+	Data getData() const { return this->eventInfo; }
+	Node* getNext() const { return this->pNext; }
 	void setNext(Node* newNext) { this->pNext = newNext; }
 private:
 	Node* pNext;
