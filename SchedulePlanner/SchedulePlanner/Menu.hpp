@@ -21,6 +21,7 @@ private:
 	void viewSchedule();
 	void createEvent();
 	void editEvent();
+	void deleteMenu();
 	string readToCharacter(string line, int& reference);
 	int promptDay();
 	void displayEvent(Data eventInfo);

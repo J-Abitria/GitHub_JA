@@ -7,25 +7,29 @@ void Day::insertInOrder(Data newData) {
 		this->listHead = pMem;
 	}
 	else {
-		Node* pCur = this->listHead;
-		int curTime = 0, memTime = pMem->getData().getHour() * 60 + pMem->getData().getMinutes();
+		Node* pPrev = this->listHead, *pCur = this->listHead->getNext();
+		int curTime = pPrev->getData().getHour() * 60 + pPrev->getData().getMinutes(),
+			memTime = pMem->getData().getHour() * 60 + pMem->getData().getMinutes();
 		bool added = false;
-		while (pCur != nullptr && !added) {
-			curTime = pCur->getData().getHour() * 60 + pCur->getData().getMinutes();
-			if (curTime < memTime) {
-				if (pCur->getNext() != nullptr) {
-					pCur = pCur->getNext();
-				}
-				else {
-					pCur->setNext(pMem);
+		if (memTime < curTime) {
+			pMem->setNext(pPrev);
+			this->listHead = pMem;
+			added = true;
+		}
+		else {
+			while (pCur != nullptr && !added) {
+				curTime = pCur->getData().getHour() * 60 + pPrev->getData().getMinutes();
+				if (memTime < curTime) {
+					pMem->setNext(pCur);
+					pPrev->setNext(pMem);
 					added = true;
 				}
+				else {
+					pCur = pCur->getNext();
+					pPrev = pPrev->getNext();
+				}
 			}
-			else {
-				pMem->setNext(pCur->getNext());
-				pCur->setNext(pMem);
-				added = true;
-			}
+			if (!added) { pPrev->setNext(pMem); }
 		}
 	}
 }
@@ -45,4 +49,25 @@ Data Day::removeFront() {
 	}
 
 	return removedInfo;
+}
+
+bool Day::removeByName(string name) {
+	Node* pPrev = this->listHead, * pCur = pPrev->getNext();
+
+	if (pPrev->getData().getEvent() == name) {
+		this->listHead = pCur;
+		delete pPrev;
+		return true;
+	}
+
+	while (pCur != nullptr) {
+		if (pCur->getData().getEvent() == name) {
+			pPrev->setNext(pCur->getNext());
+			delete pCur;
+			return true;
+		}
+		pCur = pCur->getNext();
+		pPrev = pPrev->getNext();
+	}
+	return false;
 }

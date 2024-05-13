@@ -28,6 +28,7 @@ public:
 
 	void insertInOrder(Data newData);
 	Data removeFront();
+	bool removeByName(string name);
 private:
 	string name;
 	Node* listHead;

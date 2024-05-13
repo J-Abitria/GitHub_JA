@@ -7,7 +7,7 @@ void Menu::runApp() {
 	do {
 		this->viewMenu();
 		cin >> selection;
-		if (selection > 0 && selection < 6) {
+		if (selection > 0 && selection < 7) {
 			this->runSelection(selection);
 		}
 	} while (selection != 0);
@@ -19,6 +19,7 @@ void Menu::viewMenu() {
 	cout << "3. View your schedule" << endl;
 	cout << "4. Add an event" << endl;
 	cout << "5. Change an event" << endl;
+	cout << "6. Delete event(s)" << endl;
 	cout << "0. Exit" << endl;
 }
 
@@ -51,6 +52,9 @@ void Menu::runSelection(int selection) {
 		break;
 	case 5:
 		this->editEvent();
+		break;
+	case 6:
+		this->deleteMenu();
 		break;
 	}
 	system("pause");
@@ -116,7 +120,7 @@ void Menu::createEvent() {
 
 	do {
 		system("cls");
-		cout << "Name the event you wish to make:" << endl;
+		cout << "Name the event you wish to make (no spaces or commas!):" << endl;
 		cin >> name;
 		cout << "Is this correct? (Y/N) " << name << endl;
 		cin >> confirm;
@@ -172,6 +176,39 @@ void Menu::editEvent() {
 	}
 	else {
 		cout << "There are no events to edit!" << endl;
+	}
+}
+
+void Menu::deleteMenu() {
+	int idx = this->promptDay(), selection = 0;
+	system("cls");
+	cout << "1. Delete a single event from the day" << endl;
+	cout << "2. Clear every event in the day" << endl;
+	cin >> selection;
+
+	if (selection == 2) {
+		while (this->week[idx].getHead() != nullptr) {
+			this->week[idx].removeFront();
+		}
+		cout << "Successfully cleared every event." << endl;
+	}
+	else {
+		Node* pCur = this->week[idx].getHead();
+		string deletedEvent = "";
+
+		while (pCur != nullptr) {
+			this->displayEvent(pCur->getData());
+			pCur = pCur->getNext();
+		}
+		cout << "Please enter the name of the event you want to delete (case-sensitive, spell exactly)" << endl;
+		cin >> deletedEvent;
+
+		if (!this->week[idx].removeByName(deletedEvent)) {
+			cout << "Could not find an event of that name." << endl;
+		}
+		else {
+			cout << "Successfully removed that event." << endl;
+		}
 	}
 }
 
