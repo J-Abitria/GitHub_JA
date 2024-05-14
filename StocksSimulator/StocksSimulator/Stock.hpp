@@ -47,6 +47,8 @@ public:
 	int getCurInv() { return this->curInv; }
 	int getMaxInv() { return this->maxInv; }
 	double getPrice() { return this->price; }
+	void addInv(int stocks) { this->curInv += stocks; }
+	void removeInv(int stocks) { this->curInv -= stocks; }
 
 	double updatePrice();
 private:

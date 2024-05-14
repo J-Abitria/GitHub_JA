@@ -16,8 +16,12 @@ public:
 	void populateStocks();
 	void printStocks();
 	void updateStocks();
+	void stockMenu(int idx);
 private:
 	void populateStocksPriv();
+	void buyStock(int idx);
+	void sellStock(int idx);
+
 	double money;
 	Stock stocks[7];
 	double percentages[7];

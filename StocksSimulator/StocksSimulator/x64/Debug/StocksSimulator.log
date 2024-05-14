@@ -1,5 +1,2 @@
-﻿  Player.cpp
-  main.cpp
-C:\Documents\GitHub_JA\StocksSimulator\StocksSimulator\main.cpp(19,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
+﻿  Stock.cpp
   StocksSimulator.vcxproj -> C:\Documents\GitHub_JA\StocksSimulator\x64\Debug\StocksSimulator.exe

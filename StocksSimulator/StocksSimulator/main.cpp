@@ -13,7 +13,7 @@
 int main() {
 	bool isRunning = true;
 	int count = 0;
-	Player p(0.0);
+	Player p(1000.0);
 	p.populateStocks();
 	p.printStocks();
 	srand(time(NULL));
@@ -27,7 +27,7 @@ int main() {
 			p.printStocks();
 		}
 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::X)) {
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 			isRunning = false;
 		}
 	}
