@@ -4,6 +4,8 @@ void Player::populateStocks() { this->populateStocksPriv(); }
 
 void Player::printStocks() {
 	system("cls");
+	cout << "Welcome to Stocks Simulator! Monitor the prices of stocks, and press the number key corresponding to the stock you wish to interact with." << endl;
+	cout << "Current Money: " << std::setprecision(6) << this->money << endl;
 	for (int i = 0; i < 7; i++) {
 		cout << this->stocks[i];
 		cout << " (" << this->percentages[i] / 100 << "%)" << endl;
@@ -29,10 +31,11 @@ void Player::stockMenu(int idx) {
 	else {
 		this->sellStock(idx);
 	}
+	this->printStocks();
 }
 
 void Player::populateStocksPriv() {
-	string names[7] = { "1", "2", "3", "4", "5", "6", "7" };
+	string names[7] = { "1. Workday", "2. Google", "3. Amazon", "4. Tesla", "5. Microsoft", "6. Cisco", "7. PayPal" };
 	int maxes[7] = { 100, 100, 150, 225, 50, 75, 125 };
 	double volatilities[7] = { 1000, 400, 1500, 1800, 2400, 300, 800 };
 	double avgPrices[7] = { 30.0, 60.0, 25.0, 15.0, 75.0, 70.0, 45.0 };
@@ -46,7 +49,9 @@ void Player::buyStock(int idx) {
 	int selection = 0;
 	bool bought = false;
 	do {
+		system("cls");
 		cout << "Current Money: " << std::setprecision(6) << this->money << endl;
+		cout << "Price of Stock: " << std::setprecision(4) << this->stocks[idx].getPrice() << endl;
 		cout << "Enter the number of stocks you wish to buy. Max " << this->stocks[idx].getMaxInv() - this->stocks[idx].getCurInv() << endl;
 		cin >> selection;
 		if (selection < 0) { selection = 0; }
@@ -72,6 +77,7 @@ void Player::sellStock(int idx) {
 	int selection = 0;
 	bool sold = false;
 
+	system("cls");
 	cout << "Current Money: " << std::setprecision(6) << this->money << endl;
 	cout << "How many of your stocks would you like to sell? Max " << this->stocks[idx].getCurInv() << endl;
 	cin >> selection;

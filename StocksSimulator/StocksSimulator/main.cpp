@@ -22,14 +22,19 @@ int main() {
 		sf::Window w;
 		w.setFramerateLimit(60);
 		count++;
-		if (count % 300 == 0) {
+		if (count % 180 == 0) {
 			p.updateStocks();
 			p.printStocks();
 		}
 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-			isRunning = false;
-		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) { isRunning = false; }
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)) { p.stockMenu(0); }
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)) { p.stockMenu(1); }
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3)) { p.stockMenu(2); }
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num4)) { p.stockMenu(3); }
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num5)) { p.stockMenu(4); }
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num6)) { p.stockMenu(5); }
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num7)) { p.stockMenu(6); }
 	}
 
 	return 0;
