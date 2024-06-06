@@ -71,8 +71,10 @@ void Menu::loadData() {
 
 	while (line.size() > 0) {
 		idx = stoi(this->readToCharacter(line, reference));
-		parsedInfo.setHour(stoi(this->readToCharacter(line, reference)));
-		parsedInfo.setMinutes(stoi(this->readToCharacter(line, reference)));
+		parsedInfo.setStartHour(stoi(this->readToCharacter(line, reference)));
+		parsedInfo.setStartMinutes(stoi(this->readToCharacter(line, reference)));
+		parsedInfo.setEndHour(stoi(this->readToCharacter(line, reference)));
+		parsedInfo.setEndMinutes(stoi(this->readToCharacter(line, reference)));
 		parsedInfo.setEvent(this->readToCharacter(line, reference));
 		this->week[idx].insertInOrder(parsedInfo);
 		reference = 0;
@@ -112,7 +114,7 @@ void Menu::viewSchedule() {
 }
 
 void Menu::createEvent() {
-	int selection = 0, hour = 0, minutes = 0;
+	int selection = 0, sHour = 0, sMinutes = 0, eHour = 0, eMinutes = 0;
 	string name;
 	char confirm = '\0';
 	
@@ -128,10 +130,10 @@ void Menu::createEvent() {
 
 	do {
 		system("cls");
-		cout << "Enter the time for the event (Format HH:MM)" << endl;
-		cin >> hour >> confirm >> minutes;
-		if ((hour > -1 && hour < 25) && (minutes > -1 && minutes < 60)) {
-			cout << "Are these times correct? (Y/N) - Hour: " << hour << " Minutes: " << minutes << endl;
+		cout << "Enter the start time for the event (Format HH:MM)" << endl;
+		cin >> sHour >> confirm >> sMinutes;
+		if ((sHour > -1 && sHour < 25) && (sMinutes > -1 && sMinutes < 60)) {
+			cout << "Are these times correct? (Y/N) - Hour: " << sHour << " Minutes: " << sMinutes << endl;
 			cin >> confirm;
 		}
 		else {
@@ -141,7 +143,22 @@ void Menu::createEvent() {
 		}
 	} while (toupper(confirm) != 'Y');
 
-	Data newEvent(hour, minutes, name);
+	do {
+		system("cls");
+		cout << "Enter the end time for the event (Format HH:MM)" << endl;
+		cin >> eHour >> confirm >> eMinutes;
+		if ((eHour > -1 && eHour < 25) && (eMinutes > -1 && eMinutes < 60)) {
+			cout << "Are these times correct? (Y/N) - Hour: " << eHour << " Minutes: " << eMinutes << endl;
+			cin >> confirm;
+		}
+		else {
+			cout << "One of the inputted values is invalid." << endl;
+			system("pause");
+			confirm = 'N';
+		}
+	} while (toupper(confirm) != 'Y');
+
+	Data newEvent(sHour, sMinutes, eHour, eMinutes, name);
 	this->week[selection].insertInOrder(newEvent);
 }
 
@@ -253,19 +270,20 @@ int Menu::promptDay() {
 }
 
 void Menu::displayEvent(Data eventInfo) {
-	cout << eventInfo.getEvent() << " - ";
-	if (eventInfo.getHour() < 10) {
-		cout << "0" << eventInfo.getHour() << ":";
-	}
-	else {
-		cout << eventInfo.getHour() << ":";
-	}
-	if (eventInfo.getMinutes() < 10) {
-		cout << "0" << eventInfo.getMinutes() << endl;
-	}
-	else {
-		cout << eventInfo.getMinutes() << endl;
-	}
+	cout << eventInfo.getEvent() << " / ";
+	if (eventInfo.getStartHour() < 10) { cout << "0" << eventInfo.getStartHour() << ":";  }
+	else { cout << eventInfo.getStartHour() << ":"; }
+
+	if (eventInfo.getStartMinutes() < 10) { cout << "0" << eventInfo.getStartMinutes(); }
+	else { cout << eventInfo.getStartMinutes(); }
+
+	cout << " - ";
+
+	if (eventInfo.getEndHour() < 10) { cout << "0" << eventInfo.getEndHour() << ":"; }
+	else { cout << eventInfo.getEndHour() << ":"; }
+
+	if (eventInfo.getEndMinutes() < 10) { cout << "0" << eventInfo.getEndMinutes() << endl; }
+	else { cout << eventInfo.getEndMinutes() << endl; }
 }
 
 void Menu::editingMenu(Node* dataLocation) {
@@ -277,10 +295,11 @@ void Menu::editingMenu(Node* dataLocation) {
 		this->displayEvent(dataLocation->getData());
 		cout << "Enter the number of the field to edit." << endl;
 		cout << "1. Name" << endl;
-		cout << "2. Time" << endl;
+		cout << "2. Start Time" << endl;
+		cout << "3. End Time" << endl;
 		cin >> selection;
 
-		if (selection < 1 || selection > 2) {
+		if (selection < 1 || selection > 3) {
 			cout << "This input is invalid." << endl;
 		}
 		else {
@@ -291,11 +310,23 @@ void Menu::editingMenu(Node* dataLocation) {
 				dataLocation->getDataRef().setEvent(newName);
 				break;
 			case 2:
-				cout << "Enter the new time for the event (Format HH:MM)" << endl;
+				cout << "Enter the new start time for the event (Format HH:MM)" << endl;
 				cin >> hour >> buffer >> minutes;
 				if ((hour >= 0 && hour < 24) && (minutes >= 0 && minutes < 60)) {
-					dataLocation->getDataRef().setHour(hour);
-					dataLocation->getDataRef().setMinutes(minutes);
+					dataLocation->getDataRef().setStartHour(hour);
+					dataLocation->getDataRef().setStartMinutes(minutes);
+				}
+				else {
+					cout << "This input is invalid." << endl;
+					system("pause");
+				}
+				break;
+			case 3:
+				cout << "Enter the new end time for the event (Format HH:MM)" << endl;
+				cin >> hour >> buffer >> minutes;
+				if ((hour >= 0 && hour < 24) && (minutes >= 0 && minutes < 60)) {
+					dataLocation->getDataRef().setEndHour(hour);
+					dataLocation->getDataRef().setEndMinutes(minutes);
 				}
 				else {
 					cout << "This input is invalid." << endl;
