@@ -1,37 +1,34 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
 
 using std::string;
 using std::vector;
+using std::ifstream;
 
 class Move {
 public:
 	Move() {
 		this->board = "";
-		this->root = 0;
-		this->branch = 0;
-		this->move = 0;
+		this->ID = 0;
 	}
 
-	Move(string board, int r, int b, int m) {
+	Move(string board, int i) {
 		this->board = board;
-		this->root = r;
-		this->branch = b;
-		this->move = m;
+		this->ID = i;
 	}
 
 	Move(Move& m) {
 		this->board = m.board;
-		this->root = m.root;
-		this->branch = m.branch;
-		this->move = m.move;
+		this->ID = m.ID;
 	}
 
-
+	void setBoard(string newBoard) { this->board = newBoard; }
+	void setID(int newID) { this->ID = newID; }
+	string getBoard() { return this->board; }
+	int getID() { return this->ID; }
 private:
 	string board;
-	int root;
-	int branch;
-	int move;
+	int ID;
 };

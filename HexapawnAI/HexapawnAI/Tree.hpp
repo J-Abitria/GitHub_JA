@@ -13,6 +13,8 @@ public:
 	Tree(Tree& t) {
 		this->treeHead = t.treeHead;
 	}
+
+	void insertInTree(TreeNode*& newNode);
 private:
 	TreeNode* treeHead;
 };

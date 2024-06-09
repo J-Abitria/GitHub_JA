@@ -17,6 +17,7 @@ public:
 
 	vector<TreeNode*> getChildren() const { return this->children; }
 	Move getData() { return this->data; }
+	void insertChild(TreeNode*& child) { children.push_back(child); }
 private:
 	vector<TreeNode*> children;
 	Move data;
