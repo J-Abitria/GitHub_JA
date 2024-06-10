@@ -20,6 +20,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Board1.csv" />
+    <None Include="Board2.csv" />
+    <None Include="Board3.csv" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.hpp" />

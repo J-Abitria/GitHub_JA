@@ -18,6 +18,12 @@
     <None Include="Board1.csv">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="Board2.csv">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Board3.csv">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Move.hpp">
