@@ -26,6 +26,7 @@
   <ItemGroup>
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="Move.hpp" />
+    <ClInclude Include="Pawn.hpp" />
     <ClInclude Include="Tree.hpp" />
     <ClInclude Include="TreeNode.hpp" />
   </ItemGroup>

@@ -14,6 +14,7 @@ public:
 		this->treeHead = t.treeHead;
 	}
 
+	TreeNode* getHead() const { return this->treeHead; }
 	void insertInTree(TreeNode*& newNode);
 private:
 	TreeNode* treeHead;

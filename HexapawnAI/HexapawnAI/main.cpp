@@ -13,6 +13,6 @@
 int main() {
 	Game g;
 
-	g.populateTree();
+	g.playGame();
 	return 0;
 }
