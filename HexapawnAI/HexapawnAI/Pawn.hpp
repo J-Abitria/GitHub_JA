@@ -20,7 +20,17 @@ public:
 
 	int getRow() const { return this->row; }
 	int getCol() const { return this->col; }
+	bool isCaptured() const { return this->captured; }
 	void pushPawn() { this->row--; }
+	void captureLeft() {
+		this->row--;
+		this->col--;
+	}
+	void captureRight() {
+		this->row--;
+		this->col++;
+	}
+	void capture() { this->captured = true; }
 private:
 	int row;
 	int col;

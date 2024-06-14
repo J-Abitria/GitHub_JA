@@ -11,10 +11,18 @@ private:
 	void printBoard();
 	void updateBoard();
 	void printOptions();
+	void travelTree();
+	void makeComputerMove();
+	bool checkPush(int pawn);
+	bool checkLeft(int pawn);
+	bool checkRight(int pawn);
+	void moveOptions(int pawn);
+	bool checkPlayerWin();
+	bool checkCpuWin();
 
 	Tree board1, board2, board3;
+	TreeNode* currentPosition;
 	Pawn playerPawns[3];
-	Pawn enemyPawns[3];
 	char curBoard[3][3];
 	bool legalPushes[3];
 	bool legalCaptures[6];

@@ -8,11 +8,13 @@ public:
 
 	TreeNode(Move data) {
 		this->data = data;
+		this->playable = true;
 	}
 
 	TreeNode(TreeNode& t) {
 		this->children = t.children;
 		this->data = t.data;
+		this->playable = true;
 	}
 
 	vector<TreeNode*> getChildren() const { return this->children; }
@@ -21,4 +23,5 @@ public:
 private:
 	vector<TreeNode*> children;
 	Move data;
+	bool playable;
 };
