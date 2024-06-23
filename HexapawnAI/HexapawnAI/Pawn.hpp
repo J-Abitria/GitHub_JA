@@ -31,6 +31,11 @@ public:
 		this->col++;
 	}
 	void capture() { this->captured = true; }
+	void replace() { this->captured = false; }
+	void setPosition(int r, int c) {
+		this->row = r;
+		this->col = c;
+	}
 private:
 	int row;
 	int col;

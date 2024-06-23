@@ -12,13 +12,14 @@ private:
 	void updateBoard();
 	void printOptions();
 	void travelTree();
-	void makeComputerMove();
+	TreeNode* makeComputerMove();
 	bool checkPush(int pawn);
 	bool checkLeft(int pawn);
 	bool checkRight(int pawn);
 	void moveOptions(int pawn);
 	bool checkPlayerWin();
 	bool checkCpuWin();
+	void resetGame();
 
 	Tree board1, board2, board3;
 	TreeNode* currentPosition;

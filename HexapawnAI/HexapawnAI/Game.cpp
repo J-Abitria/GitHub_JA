@@ -22,50 +22,64 @@ Game::Game() {
 void Game::playGame() {
 	int pawnMove = 0;
 	bool playerWin = false, cpuWin = false;
-	this->printBoard();
-	cout << "Enter the number of the pawn you wish to move:" << endl;
-	this->printOptions();
-	cin >> pawnMove;
-	if ((pawnMove > 0 && pawnMove < 4) && this->legalPushes[pawnMove - 1]) {
-		this->playerPawns[pawnMove - 1].pushPawn();
-		switch (pawnMove) {
-		case 1:
-			if (board1.getHead() == nullptr)
-				this->populateTree(1);
-			this->currentPosition = board1.getHead();
-			break;
-		case 2:
-			if (board2.getHead() == nullptr)
-				this->populateTree(2);
-			this->currentPosition = board2.getHead();
-			break;
-		case 3:
-			if (board3.getHead() == nullptr)
-				this->populateTree(3);
-			this->currentPosition = board3.getHead();
-			break;
-		}
-	}
+	char playing = '\0';
+	TreeNode* lastCpuMove = nullptr;
 	do {
-		this->makeComputerMove();
-		cpuWin = this->checkCpuWin();
-		if (!cpuWin) {
-			cout << "New board: " << this->currentPosition->getData().getBoard() << " - " << this->currentPosition->getData().getID() << endl;
-			this->printBoard();
-			cout << "Enter the number of the pawn you wish to move (1-3):" << endl;
-			this->printOptions();
-			do {
-				cin >> pawnMove;
-			} while (pawnMove < 0 || pawnMove > 4);
-			this->moveOptions(pawnMove - 1);
-			this->travelTree();
-			playerWin = this->checkPlayerWin();
+		this->resetGame();
+		playerWin = false, cpuWin = false;
+		lastCpuMove = nullptr;
+		system("cls");
+		this->printBoard();
+		cout << "Enter the number of the pawn you wish to move:" << endl;
+		this->printOptions();
+		cin >> pawnMove;
+		if ((pawnMove > 0 && pawnMove < 4) && this->legalPushes[pawnMove - 1]) {
+			this->playerPawns[pawnMove - 1].pushPawn();
+			switch (pawnMove) {
+			case 1:
+				if (board1.getHead() == nullptr)
+					this->populateTree(1);
+				this->currentPosition = board1.getHead();
+				break;
+			case 2:
+				if (board2.getHead() == nullptr)
+					this->populateTree(2);
+				this->currentPosition = board2.getHead();
+				break;
+			case 3:
+				if (board3.getHead() == nullptr)
+					this->populateTree(3);
+				this->currentPosition = board3.getHead();
+				break;
+			}
 		}
-	} while (!playerWin && !cpuWin);
+		do {
+			lastCpuMove = this->makeComputerMove();
+			cpuWin = this->checkCpuWin();
+			if (!cpuWin) {
+				cout << "New board: " << this->currentPosition->getData().getBoard() << " - " << this->currentPosition->getData().getID() << endl;
+				this->printBoard();
+				cout << "Enter the number of the pawn you wish to move (1-3):" << endl;
+				this->printOptions();
+				do {
+					cin >> pawnMove;
+				} while (pawnMove < 0 || pawnMove > 4);
+				this->moveOptions(pawnMove - 1);
+				this->travelTree();
+				playerWin = this->checkPlayerWin();
+			}
+		} while (!playerWin && !cpuWin);
 
-	this->printBoard();
-	if (playerWin) { cout << "You win!" << endl; }
-	if (cpuWin) { cout << "Computer wins!" << endl; }
+		this->printBoard();
+		if (playerWin) {
+			cout << "You win!" << endl;
+			lastCpuMove->getData().disableMove();
+			cout << "Removing move " << lastCpuMove->getData().getID() << " - " << lastCpuMove->getData().getBoard();
+		}
+		if (cpuWin) { cout << "Computer wins!" << endl; }
+		cout << endl << "Play again? (Y/N)" << endl;
+		cin >> playing;
+	}  while (toupper(playing) == 'Y');
 }
 
 void Game::populateTree(int tree) {
@@ -195,10 +209,13 @@ void Game::travelTree() {
 	}
 }
 
-void Game::makeComputerMove() {
-	int row = 0, col = 0;
-	int positions = this->currentPosition->getChildren().size(),
+TreeNode* Game::makeComputerMove() {
+	int row = 0, col = 0, choice = 0;
+	int positions = this->currentPosition->getChildren().size();
+	
+	do {
 		choice = rand() % positions;
+	} while (!this->currentPosition->getChildren()[choice]->getData().isPlayable());
 
 	this->currentPosition = this->currentPosition->getChildren()[choice];
 
@@ -213,6 +230,8 @@ void Game::makeComputerMove() {
 			}
 		}
 	}
+
+	return this->currentPosition;
 }
 
 bool Game::checkPush(int pawn) {
@@ -302,5 +321,22 @@ bool Game::checkCpuWin() {
 
 	if (pawns == 0) { return true; }
 
-	return this->currentPosition->getChildren().empty();
+	
+	for (int i = 0; i < 3; i++) {
+		if (this->checkLeft(i) || this->checkPush(i) || this->checkRight(i)) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+void Game::resetGame() {
+	for (int i = 0; i < 3; i++) {
+		this->playerPawns[i].setPosition(2, i);
+		this->playerPawns[i].replace();
+		this->curBoard[0][i] = 'e';
+		this->curBoard[1][i] = '.';
+		this->curBoard[2][i] = 'p';
+	}
 }
