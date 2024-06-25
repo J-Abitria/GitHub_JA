@@ -14,7 +14,7 @@
 - A simulator of seven different stocks of varying volatility. Users can press the number key corresponding to the stock they wish to interact with, either to buy stock or sell existing shares, the goal to maximize profit. Stock prices update every 2 seconds by a random percentage, and the user can press Esc at any time to exit the simulator.
 #### Breakout Clone [C#] [Unity] (6/5/2024) <br>
 - A clone of the classic brick breaker Breakout. First experience using the Unity engine, scene management. Created in Unity 2D URP. Play the game and download the files at https://jabi-jpeg.itch.io/breakoutclone
-#### Hexapawn AI [C++] (WIP) <br>
-- Creating a computer that plays the game Hexapawn, and gets stronger the longer the user plays against it.
+#### Hexapawn AI [C++] (6/23/2024) <br>
+- A program running the game Hexapawn, a game on a 3x3 board with each side having 3 pawns each. The player wins the game by pushing a pawn to the other side of the board, capturing all opposing pawns, or leaving the opponent with no legal move. The AI in the program originally plays randomly, but will improve its moves the longer the player plays against it until it becomes unbeatable. The AI utilizes a database of moves to track legal moves and losing moves.
 #### Close the Castle [C#] [Unity] (WIP) <br>
 - Creating a TD game inspired by Hold the Place, improving upon the mechanics and expanding the game.
