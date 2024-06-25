@@ -19,7 +19,13 @@ public:
 
 	vector<TreeNode*> getChildren() const { return this->children; }
 	Move getData() { return this->data; }
+	Move& getDataRef() { return this->data; }
 	void insertChild(TreeNode*& child) { children.push_back(child); }
+	void printChildren() {
+		for (TreeNode* t : this->children) {
+			cout << t->getData().getBoard() << " - " << t->getData().getID() << endl;
+		}
+	}
 private:
 	vector<TreeNode*> children;
 	Move data;
