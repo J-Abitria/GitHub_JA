@@ -56,7 +56,6 @@ void Game::playGame() {
 			lastCpuMove = this->makeComputerMove();
 			cpuWin = this->checkCpuWin();
 			if (!cpuWin) {
-				this->currentPosition->printChildren();
 				this->printBoard();
 				cout << "Enter the number of the pawn you wish to move (1-3):" << endl;
 				this->printOptions();
@@ -328,7 +327,7 @@ bool Game::checkCpuWin() {
 
 	
 	for (int i = 0; i < 3; i++) {
-		if (this->checkLeft(i) || this->checkPush(i) || this->checkRight(i)) {
+		if (!this->playerPawns[i].isCaptured() && (this->checkLeft(i) || this->checkPush(i) || this->checkRight(i))) {
 			return false;
 		}
 	}
