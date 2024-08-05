@@ -1,3 +1,8 @@
-﻿  main.cpp
-C:\Documents\GitHub_JA\MazeMaker\MazeMaker\main.cpp(24,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+﻿  Maze.cpp
+C:\Documents\GitHub_JA\MazeMaker\MazeMaker\Maze.cpp(61,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Node.cpp
+  Stack.cpp
+  Tile.cpp
+  main.cpp
+  Generating Code...
   MazeMaker.vcxproj -> C:\Documents\GitHub_JA\MazeMaker\x64\Debug\MazeMaker.exe

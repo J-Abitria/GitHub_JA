@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include <ctime>
@@ -17,72 +18,23 @@ using std::endl;
 */
 class Tile {
 public:
-	Tile(int count) {
-		this->isPath = false;
-		this->ID = count;
-	}
+	Tile();
+	Tile(int count);
 
-	void setType(int mazeWidth) {
-		if (this->ID != 1) {
-			if (this->ID == mazeWidth) {
-				this->neighbors.push_back(this->ID - 1);
-				this->neighbors.push_back(this->ID + mazeWidth);
-			}
-			else if (this->ID == mazeWidth * mazeWidth - (mazeWidth - 1)) {
-				this->neighbors.push_back(this->ID + 1);
-				this->neighbors.push_back(this->ID - mazeWidth);
-			}
-			else if (this->ID == mazeWidth * mazeWidth) {
-				this->neighbors.push_back(this->ID - 1);
-				this->neighbors.push_back(this->ID - mazeWidth);
-			}
-			else {
-				if (this->ID <= mazeWidth) {
-					this->neighbors.push_back(this->ID + 1);
-					this->neighbors.push_back(this->ID - 1);
-					this->neighbors.push_back(this->ID + mazeWidth);
-				}
-				else if (this->ID > (mazeWidth - 1) * mazeWidth) {
-					this->neighbors.push_back(this->ID + 1);
-					this->neighbors.push_back(this->ID - 1);
-					this->neighbors.push_back(this->ID - mazeWidth);
-				}
-				else if (this->ID % mazeWidth == 0) {
-					this->neighbors.push_back(this->ID + mazeWidth);
-					this->neighbors.push_back(this->ID - mazeWidth);
-					this->neighbors.push_back(this->ID - 1);
-				}
-				else if (this->ID % mazeWidth == 1) {
-					this->neighbors.push_back(this->ID + mazeWidth);
-					this->neighbors.push_back(this->ID - mazeWidth);
-					this->neighbors.push_back(this->ID + 1);
-				}
-				else {
-					this->neighbors.push_back(this->ID + mazeWidth);
-					this->neighbors.push_back(this->ID - mazeWidth);
-					this->neighbors.push_back(this->ID + 1);
-					this->neighbors.push_back(this->ID - 1);
-				}
-			}
-		}
-		else {
-			this->neighbors.push_back(this->ID + 1);
-			this->neighbors.push_back(this->ID + mazeWidth);
-		}
-	}
-
-	void addWalls(vector<int>& walls) {
-		for (int i : neighbors) {
-			walls.push_back(i);
-		}
-	}
-
+	void setType(int mazeWidth);
+	void addWalls(vector<int>& walls);
 	bool checkPath() { return this->isPath; }
+	bool checkVisit() { return this->visited; }
+	bool isDead() { return this->dead; }
 	int getID() { return this->ID; }
 	vector<int> getNeighbors() { return this->neighbors; }
 	void makePath() { this->isPath = true; }
+	void logVisit() { this->visited = true; }
+	void labelDead() { this->dead = true; }
 private:
 	bool isPath;
+	bool visited;
+	bool dead;
 	int ID;
 	vector<int> neighbors;
 };

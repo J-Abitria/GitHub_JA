@@ -13,6 +13,30 @@
     {
       "AbsoluteMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Tile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|solutionrelative:MazeMaker\\Tile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Maze.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|solutionrelative:MazeMaker\\Maze.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Stack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|solutionrelative:MazeMaker\\Stack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Node.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|solutionrelative:MazeMaker\\Node.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Node.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|solutionrelative:MazeMaker\\Node.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Stack.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|solutionrelative:MazeMaker\\Stack.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Maze.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{64D9D3A2-40BE-42FF-A2B7-828781853C08}|MazeMaker\\MazeMaker.vcxproj|solutionrelative:MazeMaker\\Maze.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +46,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Stack.cpp",
+              "DocumentMoniker": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Stack.cpp",
+              "RelativeDocumentMoniker": "MazeMaker\\Stack.cpp",
+              "ToolTip": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Stack.cpp",
+              "RelativeToolTip": "MazeMaker\\Stack.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-03T16:44:35.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Node.cpp",
+              "DocumentMoniker": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Node.cpp",
+              "RelativeDocumentMoniker": "MazeMaker\\Node.cpp",
+              "ToolTip": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Node.cpp",
+              "RelativeToolTip": "MazeMaker\\Node.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-03T16:40:58.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Node.hpp",
+              "DocumentMoniker": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Node.hpp",
+              "RelativeDocumentMoniker": "MazeMaker\\Node.hpp",
+              "ToolTip": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Node.hpp",
+              "RelativeToolTip": "MazeMaker\\Node.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-03T16:37:43.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Stack.hpp",
+              "DocumentMoniker": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Stack.hpp",
+              "RelativeDocumentMoniker": "MazeMaker\\Stack.hpp",
+              "ToolTip": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Stack.hpp",
+              "RelativeToolTip": "MazeMaker\\Stack.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-03T16:35:55.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Maze.cpp",
+              "DocumentMoniker": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Maze.cpp",
+              "RelativeDocumentMoniker": "MazeMaker\\Maze.cpp",
+              "ToolTip": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Maze.cpp",
+              "RelativeToolTip": "MazeMaker\\Maze.cpp",
+              "ViewState": "AQIAAHYAAAAAAAAAAAAAAH8AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-02T23:03:42.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Maze.hpp",
+              "DocumentMoniker": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Maze.hpp",
+              "RelativeDocumentMoniker": "MazeMaker\\Maze.hpp",
+              "ToolTip": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Maze.hpp",
+              "RelativeToolTip": "MazeMaker\\Maze.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-02T23:02:00.417Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -36,9 +138,10 @@
               "RelativeDocumentMoniker": "MazeMaker\\Tile.cpp",
               "ToolTip": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Tile.cpp",
               "RelativeToolTip": "MazeMaker\\Tile.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-01T17:23:31.108Z"
+              "WhenOpened": "2024-08-01T17:23:31.108Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -48,7 +151,7 @@
               "RelativeDocumentMoniker": "MazeMaker\\Tile.hpp",
               "ToolTip": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\Tile.hpp",
               "RelativeToolTip": "MazeMaker\\Tile.hpp",
-              "ViewState": "AQIAAEIAAAAAAAAAAAArwFIAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACAAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-08-01T17:23:23.853Z",
               "EditorCaption": ""
@@ -61,7 +164,7 @@
               "RelativeDocumentMoniker": "MazeMaker\\main.cpp",
               "ToolTip": "C:\\Documents\\GitHub_JA\\MazeMaker\\MazeMaker\\main.cpp",
               "RelativeToolTip": "MazeMaker\\main.cpp",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEMAAAADAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-08-01T03:00:29.022Z",
               "EditorCaption": ""

@@ -1,2 +1,5 @@
 C:\Documents\GitHub_JA\MazeMaker\MazeMaker\main.cpp;C:\Documents\GitHub_JA\MazeMaker\MazeMaker\x64\Debug\main.obj
+C:\Documents\GitHub_JA\MazeMaker\MazeMaker\Maze.cpp;C:\Documents\GitHub_JA\MazeMaker\MazeMaker\x64\Debug\Maze.obj
+C:\Documents\GitHub_JA\MazeMaker\MazeMaker\Node.cpp;C:\Documents\GitHub_JA\MazeMaker\MazeMaker\x64\Debug\Node.obj
+C:\Documents\GitHub_JA\MazeMaker\MazeMaker\Stack.cpp;C:\Documents\GitHub_JA\MazeMaker\MazeMaker\x64\Debug\Stack.obj
 C:\Documents\GitHub_JA\MazeMaker\MazeMaker\Tile.cpp;C:\Documents\GitHub_JA\MazeMaker\MazeMaker\x64\Debug\Tile.obj
