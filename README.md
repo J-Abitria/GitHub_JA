@@ -16,5 +16,7 @@
 - A clone of the classic brick breaker Breakout. First experience using the Unity engine, scene management. Created in Unity 2D URP. Play the game and download the files at https://jabi-jpeg.itch.io/breakoutclone
 #### Hexapawn AI [C++] (6/23/2024) <br>
 - A program running the game Hexapawn, a game on a 3x3 board with each side having 3 pawns each. The player wins the game by pushing a pawn to the other side of the board, capturing all opposing pawns, or leaving the opponent with no legal move. The AI in the program originally plays randomly, but will improve its moves the longer the player plays against it until it becomes unbeatable. The AI utilizes a database of moves to track legal moves and losing moves.
+#### MazeMaker [C++] (8/04/2024) <br>
+- A program that randomly generates a square maze of a size that is determined by the user. The maze can be as small as 5x5 or as large as 20x20. A start and end point is randomly generated at an edge or corner of the maze where only one neighboring path exists. Once generated, the maze is then solved by the computer using a depth-first search algorithm, tracking the path taken to exit the maze, and tracking any encountered dead ends in its search.
 #### Close the Castle [C#] [Unity] (WIP) <br>
 - Creating a TD game inspired by Hold the Place, improving upon the mechanics and expanding the game.
