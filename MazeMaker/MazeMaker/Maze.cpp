@@ -28,42 +28,44 @@ void Maze::addToList(vector<int> neighbors) {
 
 void Maze::printMaze() {
 	system("cls");
+	std::string output = "";
 	for (int i = 0; i < this->mazeWidth; i++) {
 		for (int j = 0; j < this->mazeWidth; j++) {
-			if (this->tiles[this->mazeWidth * i + j].checkVisit()) {
+			if (this->tiles[this->mazeWidth * i + j].checkVisit() && (this->tiles[this->mazeWidth * i + j].getID() != this->start && this->tiles[this->mazeWidth * i + j].getID() != this->end)) {
 				if (this->tiles[this->mazeWidth * i + j].isDead()) {
-					cout << "X ";
+					output += "X ";
 				}
 				else {
-					cout << "V ";
+					output += "V ";
 				}
 			}
 			else if (!this->tiles[this->mazeWidth * i + j].checkPath()) {
-				cout << "  ";
+				output += "  ";
 			}
 			else {
 				if (this->start == this->tiles[this->mazeWidth * i + j].getID()) {
-					cout << "S ";
+					output += "S ";
 				}
 				else if (this->end == this->tiles[this->mazeWidth * i + j].getID()) {
-					cout << "E ";
+					output += "E ";
 				}
 				else {
-					cout << "O ";
+					output += "O ";
 				}
 			}
 		}
-		cout << endl;
+		output += "\n";
 	}
+	cout << output;
 }
 
 void Maze::makeMaze() {
 	srand(time(NULL));
 
 	do {
-		cout << "Enter the size of the maze you want to make (enter an integer from 5-20, the maze will be of size nxn): ";
+		cout << "WARNING! Flashing lights." << endl << "Enter the size of the maze you want to make (enter an integer from 5-25, the maze will be of size nxn): ";
 		cin >> this->mazeWidth;
-	} while (this->mazeWidth < 5 || this->mazeWidth > 20);
+	} while (this->mazeWidth < 5 || this->mazeWidth > 25);
 
 	for (int i = 0; i < this->mazeWidth * this->mazeWidth; i++) {
 		Tile t(i + 1);
@@ -141,4 +143,5 @@ void Maze::solveMaze() {
 		possibleTrails.clear();
 		this->printMaze();
 	}
+	system("pause");
 }
