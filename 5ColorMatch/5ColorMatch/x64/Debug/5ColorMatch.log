@@ -1,5 +1,0 @@
-﻿  main.cpp
-C:\Users\jsabi\OneDrive\Documents\CPT_S 122\ProgrammingAssignments_122\5ColorMatch\5ColorMatch\Menu.hpp(10,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  (compiling source file 'main.cpp')
-  
-  5ColorMatch.vcxproj -> C:\Users\jsabi\OneDrive\Documents\CPT_S 122\ProgrammingAssignments_122\5ColorMatch\x64\Debug\5ColorMatch.exe

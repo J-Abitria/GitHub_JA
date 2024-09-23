@@ -1,3 +1,0 @@
-﻿  Maze.cpp
-C:\Documents\GitHub_JA\MazeMaker\MazeMaker\Maze.cpp(63,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  MazeMaker.vcxproj -> C:\Documents\GitHub_JA\MazeMaker\x64\Debug\MazeMaker.exe
