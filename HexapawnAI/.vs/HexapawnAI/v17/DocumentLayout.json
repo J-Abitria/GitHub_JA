@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Documents\\GitHub_JA\\HexapawnAI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\Tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Pawn.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\Pawn.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Board1.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\Board1.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Tree.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\Tree.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Game.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\Game.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Pawn.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\Pawn.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\Tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Move.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -31,16 +39,8 @@
       "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\Board2.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Tree.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\Tree.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\TreeNode.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\TreeNode.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Board1.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|solutionrelative:HexapawnAI\\Board1.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A9C8650-46E0-4D26-8CA1-A89F574C4793}|HexapawnAI\\HexapawnAI.vcxproj|C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Board3.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Tree.cpp",
               "DocumentMoniker": "C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Tree.cpp",
               "RelativeDocumentMoniker": "HexapawnAI\\Tree.cpp",
@@ -74,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Game.cpp",
               "DocumentMoniker": "C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Game.cpp",
               "RelativeDocumentMoniker": "HexapawnAI\\Game.cpp",
@@ -87,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\main.cpp",
               "RelativeDocumentMoniker": "HexapawnAI\\main.cpp",
@@ -95,23 +95,25 @@
               "RelativeToolTip": "HexapawnAI\\main.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-06-08T18:44:19.812Z"
+              "WhenOpened": "2024-06-08T18:44:19.812Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Game.hpp",
               "DocumentMoniker": "C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Game.hpp",
               "RelativeDocumentMoniker": "HexapawnAI\\Game.hpp",
               "ToolTip": "C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Game.hpp",
               "RelativeToolTip": "HexapawnAI\\Game.hpp",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAABMAAABhAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAABMAAABhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-08T18:43:55.398Z"
+              "WhenOpened": "2024-06-08T18:43:55.398Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Tree.hpp",
               "DocumentMoniker": "C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Tree.hpp",
               "RelativeDocumentMoniker": "HexapawnAI\\Tree.hpp",
@@ -119,11 +121,12 @@
               "RelativeToolTip": "HexapawnAI\\Tree.hpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-07T20:48:41.049Z"
+              "WhenOpened": "2024-06-07T20:48:41.049Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "TreeNode.hpp",
               "DocumentMoniker": "C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\TreeNode.hpp",
               "RelativeDocumentMoniker": "HexapawnAI\\TreeNode.hpp",
@@ -135,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "Board1.csv",
               "DocumentMoniker": "C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Board1.csv",
               "RelativeDocumentMoniker": "HexapawnAI\\Board1.csv",
@@ -143,11 +146,12 @@
               "RelativeToolTip": "HexapawnAI\\Board1.csv",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-06-07T18:49:44.257Z"
+              "WhenOpened": "2024-06-07T18:49:44.257Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Pawn.hpp",
               "DocumentMoniker": "C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Pawn.hpp",
               "RelativeDocumentMoniker": "HexapawnAI\\Pawn.hpp",
@@ -155,7 +159,8 @@
               "RelativeToolTip": "HexapawnAI\\Pawn.hpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-11T20:30:34.073Z"
+              "WhenOpened": "2024-06-11T20:30:34.073Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -171,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Board2.csv",
               "DocumentMoniker": "C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Board2.csv",
               "RelativeDocumentMoniker": "HexapawnAI\\Board2.csv",
@@ -183,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Move.hpp",
               "DocumentMoniker": "C:\\Documents\\GitHub_JA\\HexapawnAI\\HexapawnAI\\Move.hpp",
               "RelativeDocumentMoniker": "HexapawnAI\\Move.hpp",
